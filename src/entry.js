@@ -3,9 +3,7 @@ export function WordCount(bodyEntry) {
   let outputWordsNumber = splitArray.length;
   //method for returning number of words
   return outputWordsNumber;
-  //seperate method for returning number of vowels and consonants
 
-  //seperate method getTeaser to return first sentence of entry.
 }
 export function VowelsCount(bodyEntry) {
   //
@@ -22,8 +20,22 @@ export function VowelsCount(bodyEntry) {
   return x;
 }
 export function Consonants(bodyEntry) {
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  const james = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'];
+  let splitArray = bodyEntry.split("");
   let x = 0;
-  return x;
+  let y = 0;
+  splitArray.forEach(function(letter){
+    james.forEach(function(jam){
+      if(letter == jam){
+        y += 1;
+        console.log(y + letter + jam);
+      }else{
+        x += 1;
+      };
+    });
+  });
+  return y;
 }
 export function ReturnSentence(bodyEntry) {
   var outputSentence = [bodyEntry];

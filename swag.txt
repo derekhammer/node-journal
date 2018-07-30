@@ -1,0 +1,21 @@
+var bodyEntry = "James";
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+  let splitArray = bodyEntry.split("");
+  let x = 0;
+  let y = 0;
+  splitArray.forEach(function(letter){
+    vowels.forEach(function(vowel){
+      if(letter !== vowel && letter !== '.' && letter !== ' '){
+        y += 1;
+        console.log(x + letter + vowel);
+      }else{
+        x+=1;
+      };
+    });
+    if(y === 0){
+      x+=1;
+    }else{
+      y= 0;
+    }
+  });
+  console.log(x);
